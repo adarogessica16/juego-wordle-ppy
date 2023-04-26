@@ -70,6 +70,8 @@ function intentar(){
     intentos--
     if(INTENTO=== palabra){
         terminar("<h2> Has ganado, felicidades :) </h2>");
+        document.getElementById(('guess-button')).style.display = "none";
+        document.getElementById(('try-again')).style.display = "block";  
         return INTENTO
     }
     if (intentos==0){
