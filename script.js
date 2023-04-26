@@ -1,11 +1,12 @@
 let intentos= 6;
-let diccionario = ['APPLE', 'HURLS', 'WINGS', 'YOUTH','ARROW']
-//let palabra= 'APPLE';
+let diccionario = ['POETA', 'RAMOS', 'RATON', 'CIELO','PLUMA','HONGO','FRESA','SALSA','LIMON','PLAYA'];
 let palabra= seleccionarPalabra(diccionario);
-console.log(palabra);
+  console.log(palabra);
 const BOTON= document.getElementById('guess-button');
 const BOTON2=document.getElementById('try-again');
 const INTENTO=document.getElementById('guess-input');
+const BOTONAYUDA= document.getElementById('boton-ayuda');
+const BOTONCERRAR= document.getElementById('boton-Cerrar');
 /*----EVENTOS---- */
 BOTON.addEventListener('click',() => {
     intentar();
@@ -14,7 +15,15 @@ BOTON.addEventListener('click',() => {
 BOTON2.addEventListener('click', () => {
     // Recarga la pagina para volver a jugar
    location.reload();
-   intentar();
+   //intentar();
+})
+//Muestra informacion acerca del juego
+BOTONAYUDA.addEventListener('click',() => {
+    document.getElementById(("informacion")).style.display = "block";
+})
+//Muestra la pantalla del juego
+BOTONCERRAR.addEventListener('click',() => {
+    document.getElementById(("informacion")).style.display = "none";
 })
 //Validar enter
 INTENTO.addEventListener('keydown', (event) =>{
@@ -65,9 +74,11 @@ function intentar(){
     }
     if (intentos==0){
         terminar("<h2> Se acabaron los intentos :( </h2>")
+        //Desaparece intentar y aparece la opcion volver a intentar
+        document.getElementById(('guess-button')).style.display = "none";
+        document.getElementById(('try-again')).style.display = "block";
     }
-    return
-    
+    return  
 }
 
 function terminar(mensaje){

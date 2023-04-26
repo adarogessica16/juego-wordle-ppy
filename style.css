@@ -26,10 +26,8 @@ body {
     width: 250px;
     border: 1px solid #ccc;
    
-  }
-
-     
-  .boton {
+  }  
+  #guess-button {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -38,13 +36,49 @@ body {
     color: #fff;
     border: none;
     margin-top: 20px;
-    border-radius: 3px;
+    border-radius: 10px;
+  }
+  #try-again{
+    display: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0CBABA;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+
   }
      
   button:active {
       transform: scale(0.95);
   }
-     
+  .ayuda{
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #0CBABA;
+    color: #fff;
+    border:#ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+#informacion{
+  display: none;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto 20px;
+  background-color: #8fdcdc;
+  color: #352929;
+  transform: translateY(-90%);
+  overflow: hidden;
+  padding: 25px;
+  border:#ccc;
+  border-radius: 10px;
+  
+    }
   .letter {
       border: 1px solid black;
       padding: 5px;
